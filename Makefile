@@ -1,7 +1,6 @@
 installdependencies:
 	if [ -d ~/.oh-my-zsh ]; then \
-	git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh ; \
-	else \
+	git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh ; else \
 	echo "nothing to do"; \
 	fi
 
