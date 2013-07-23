@@ -1,11 +1,9 @@
 installdependencies:
 	if [ -d ~/.oh-my-zsh ]; then \
-	git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh ; else \
-	echo "nothing to do"; \
-	fi
+	echo "nothing to do"; else \
+	git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh ; fi
 
 build:
-	mv ~/andydotfiles ~/.andydotfiles
 	if [ -d ~/.andydotfiles/backup ] ; then \
 	mkdir ~/.andydotfiles/backup ; fi
 	if [ -f ~/.zshrc ] ; then \
@@ -16,12 +14,15 @@ build:
 	cp ~/.gitconfig ~/.andydotfiles/backup/.gitconfig ; fi
 	ln -s ~/.andydotfiles/.zshrc ~/.zshrc
 	ln -s ~/.andydotfiles/.vimrc ~/.vimrc
-	ln -s ~/.andydotfiles/.ginconfig ~/.gitconfig
+	ln -s ~/.andydotfiles/.gitconfig ~/.gitconfig
 
 uninstall:
 	if [ -f ~/.andydotfiles/backup/.zshrc ] ; then \
-	cp ~/.andydotfiles/backup/.zshrc ~/.zshrc ; fi
+	cp ~/.andydotfiles/backup/.zshrc ~/.zshrc ; else \
+	rm -f ~/.zshrc; fi
 	if [ -f ~/.andydotfiles/backup/.vimrc ] ; then \
-	cp ~/.andydotfiles/backup/.vimrc ~/.vimrc ; fi
+	cp ~/.andydotfiles/backup/.vimrc ~/.vimrc ; else \
+	rm -f ~/.vimrc; fi
 	if [ -f ~/.andydotfiles/backup/.vimrc ] ; then \
-	cp ~/.andydotfiles/backup/.gitconfig ~/.gitconfig ; fi
+	cp ~/.andydotfiles/backup/.gitconfig ~/.gitconfig ; else \
+	rm -f ~/.gitconfig; fi
