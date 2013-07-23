@@ -5,6 +5,7 @@ installdependencies:
 
 build:
 	if [ -d ~/.andydotfiles/backup ] ; then \
+	echo "backup exists"; else \
 	mkdir ~/.andydotfiles/backup ; fi
 	if [ -f ~/.zshrc ] ; then \
 	cp ~/.zshrc ~/.andydotfiles/backup/.zshrc ; fi
