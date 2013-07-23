@@ -8,11 +8,11 @@ build:
 	echo "backup exists"; else \
 	mkdir ~/.andydotfiles/backup ; fi
 	if [ -f ~/.zshrc ] ; then \
-	cp ~/.zshrc ~/.andydotfiles/backup/.zshrc ; fi
+	mv ~/.zshrc ~/.andydotfiles/backup/.zshrc ; fi
 	if [ -f ~/.vimrc ] ; then \
-	cp ~/.vimrc ~/.andydotfiles/backup/.vimrc ; fi
+	mv ~/.vimrc ~/.andydotfiles/backup/.vimrc ; fi
 	if [ -f ~/.gitconfig ] ; then \
-	cp ~/.gitconfig ~/.andydotfiles/backup/.gitconfig ; fi
+	mv ~/.gitconfig ~/.andydotfiles/backup/.gitconfig ; fi
 	ln -s ~/.andydotfiles/.zshrc ~/.zshrc
 	ln -s ~/.andydotfiles/.vimrc ~/.vimrc
 	ln -s ~/.andydotfiles/.gitconfig ~/.gitconfig
