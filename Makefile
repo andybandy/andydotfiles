@@ -11,7 +11,7 @@ build:
 	cp ~/.zshrc ~/.andydotfiles/backup/.zshrc ; fi
 	if [ -f ~/.vimrc ] ; then \
 	cp ~/.vimrc ~/.andydotfiles/backup/.vimrc ; fi
-	if [ -f ~/.vimrc ] ; then \
+	if [ -f ~/.gitconfig ] ; then \
 	cp ~/.gitconfig ~/.andydotfiles/backup/.gitconfig ; fi
 	ln -s ~/.andydotfiles/.zshrc ~/.zshrc
 	ln -s ~/.andydotfiles/.vimrc ~/.vimrc
